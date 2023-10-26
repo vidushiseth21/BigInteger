@@ -1,31 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-struct BigInteger initialize(char*);
-void insert(struct BigInteger*,int);
-void display(struct BigInteger);
-void reverse(struct BigInteger*);
-void swap(struct BigInteger*,struct BigInteger*);
-int compare(struct BigInteger,struct BigInteger);
-struct BigInteger add(struct BigInteger,struct BigInteger);
-struct BigInteger subaddition(struct BigInteger,struct BigInteger);
-struct BigInteger addsubtract(struct BigInteger,struct BigInteger);
-struct BigInteger mul(struct BigInteger,struct BigInteger);
-struct BigInteger sub(struct BigInteger,struct BigInteger);
-struct BigInteger div1(struct BigInteger,struct BigInteger);
-struct BigInteger divby2(struct BigInteger);
-struct BigInteger mod(struct BigInteger,struct BigInteger);
-struct node
-{
-    int data;
-    struct node* next;
-};
-struct BigInteger
-{
-    struct node* head;
-    long long int size;
-    int sign;
-};
+#include"BigInteger.h"
 void insert(struct BigInteger* big,int val)
 {
     struct node* temp=(struct node*)malloc(sizeof(struct node));
